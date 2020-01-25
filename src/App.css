@@ -1,0 +1,50 @@
+header {
+  background-color: darkslategrey;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: calc(10px + 1vmin);
+  color: white;
+}
+
+span {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: whitesmoke;
+  color: black;
+}
+
+header p {
+  padding-bottom: 20px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+}
+
+button {
+  border-radius: 10%;
+  border: black solid 2px;
+  background-color: darkslategrey;
+  color: white;
+  height: fit-content;
+}
+
+textarea {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2vmin;
+    background-color: white;
+    border: black solid 2px;
+    width: 50vh;
+    height: calc(2vmin + 10px);
+    margin: 5px;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+button:focus {
+  outline: none;
+}
