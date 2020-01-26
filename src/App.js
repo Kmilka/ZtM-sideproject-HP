@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-
+import cat from './halloween-black-cat.svg';
+import spell from './spell.svg';
 
 
 class App extends Component {
@@ -9,6 +10,7 @@ class App extends Component {
     super();
     this.state = {
       characters: [],
+      spells: [],
     };
 
   }
@@ -29,49 +31,87 @@ class App extends Component {
         characters: result,
       });   
     });
+    fetch("https://www.potterapi.com/v1/spells?key=$2a$10$zaAYmnF8pkJKPm1CyyrYluWrAaLBdiiNKDA241lTtzwqe.LoyzFrG")
+    .then(res => res.json())
+    .then((result) => {
+      this.setState({
+        spells: result,
+      });   
+    });
   }
 
   render() {
     const {characters} = this.state;
     return (
+      !characters.length ?
+      <h1>Loading</h1> :
       <div>
         <header>
           <h1>
-            Students and teachers of Hogwarts School of Witchcraft and Wizardry <br/><span>and their friends and enemies</span>
+            Search for a certain person from <span>Harry Potter</span>
+            <img src={cat} alt="cat" /> universe and
+            <br/>
+            <img src={spell} alt="spell" />
+            &nbsp; cast a spell on him or her
           </h1>
+          <div className="search">
+            <input type="text" placeholder="  Type name" onChange={(event) => this.handleChange(event)}></input>
+            <button onClick={() => this.handleClick}></button>
+          </div>
         </header>
-        <div className="search">
-          <textarea type="text" placeholder="  Type name" value={this.state.search} onChange={(event) => this.handleChange(event)}></textarea>
-          <button onClick={() => this.handleClick}>Search</button> */}
-          <div>{characters.length ? characters : "Loading"}</div>
-        </div>
+        <CardList props={this.state.characters} />
       </div>
     )
   }
 
 }
 
+function CardList ( listOfCharacters ) {
+  return (
+    <div className="card-list">
+      {listOfCharacters.props.map(
+        (value, index) => 
+        <Card 
+          key={index}
+          character={value} 
+        />)
+      }
+    </div>
+  )
+}
 
-// class Card extends Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//      _id: "5a0fa4daae5bc100213c232e"
-// name: "Hannah Abbott"
-// role: "student"
-// house: "Hufflepuff"
-// school: "Hogwarts School of Witchcraft and Wizardry"
-// __v: 0
-// ministryOfMagic: false
-// orderOfThePhoenix: false
-// dumbledoresArmy: true
-// deathEater: false
-// bloodStatus: "half-blood"
-// species: "human"
 
-//     }
-//   }
-// }
+function Card (props) {
+  const { name, role, house, ministryOfMagic, orderOfThePhoenix, dumbledoresArmy, deathEater, bloodStatus, species } = props.character;
+  const teamPlayer = [];
+  deathEater ? teamPlayer.push("DeathEater") : teamPlayer.push("");
+  ministryOfMagic ? teamPlayer.push("Worked in the Ministry of Magic") : teamPlayer.push("");
+  dumbledoresArmy ? teamPlayer.push("Joined the Dumbldore's Army") : teamPlayer.push("");
+  orderOfThePhoenix ? teamPlayer.push("One of the Order of the Phoenix") : teamPlayer.push("");
+
+  const listItems = teamPlayer.map((value, index) => {
+      if (value !== "") {
+        return <li>{value}</li>        
+      } else return null;
+  });
+
+  return (
+    <div className="card">
+      <h1>{name}</h1>
+      <h2>{role}</h2>
+      <hr>
+      </hr>
+      <ul>
+        <li>Species: {species}</li>
+        <li>Bloodstatus: {bloodStatus}</li>
+        <li className={ !house ? "invisible" : ""} >Hogwarts house: {house}</li>
+      </ul>
+        <ul>
+          {listItems}
+        </ul>
+    </div>
+  )
+  }
 
 
 export default App;

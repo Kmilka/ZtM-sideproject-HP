@@ -1,50 +1,116 @@
 header {
-  background-color: darkslategrey;
   height: 30vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  color: black;
   font-size: calc(10px + 1vmin);
-  color: white;
+  text-align: center;
 }
 
 span {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  background-color: whitesmoke;
-  color: black;
+  font-size: calc(20px + 4vmax);
+  font-family: 'Zhi Mang Xing';
+  text-transform: capitalize;
 }
 
-header p {
-  padding-bottom: 20px;
+button {
+  border-radius: 10%;
+  background-image: url(wizard.svg);
+  height: 7vmin;
+  width: 7vmin;
 }
 
 .search {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
-button {
-  border-radius: 10%;
-  border: black solid 2px;
-  background-color: darkslategrey;
-  color: white;
-  height: fit-content;
-}
-
-textarea {
+input {
     font-family: 'Roboto', sans-serif;
     font-size: 2vmin;
     background-color: white;
     border: black solid 2px;
+    border-radius: 8%;
     width: 50vh;
-    height: calc(2vmin + 10px);
+    height: calc(3vmin + 10px);
     margin: 5px;
 }
 
-textarea:focus {
+input:focus {
   outline: none;
 }
 
 button:focus {
   outline: none;
+}
+
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.card {
+  border: solid 2px black;
+  border-radius: 5%;
+  background-color: cadetblue;
+  margin: 7px;
+  padding: 5px;
+  font-size: calc(10px + 1vmin);
+}
+
+.card:hover {
+  transition: ease-in;
+  transform: scale(1.02, 1.02);
+  background-color: greenyellow;
+}
+
+.invisible {
+  display: none;
+}
+
+hr {
+  background: url(halloween.svg) no-repeat top center;
+  background-size: contain;
+  display: block;
+  height: 18px;
+  border: 0;
+  position: relative;
+}
+
+hr:before,
+hr:after {
+    content: '';
+    display: block;
+    position: absolute;
+    background: black;
+    height: 2px;
+    top: 8px;
+}
+
+hr:before {
+    left: 0;
+    right: 50%;
+    margin-right: 10px;
+}
+hr:after {
+    right: 0;
+    left: 50%;
+    margin-left: 10px;
+}
+
+img {
+  height: calc(50px + 1vmin);
+}
+
+ul {
+  padding: 0 0 0 20px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+div > h1 {
+  font-size: calc(15px + 1vmin);
+}
+
+div > h2 {
+  font-size: calc(10px + 1vmin);
 }
