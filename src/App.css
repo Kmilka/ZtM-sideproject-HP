@@ -1,21 +1,34 @@
 header {
-  height: 30vh;
   color: black;
   font-size: calc(10px + 1vmin);
   text-align: center;
 }
 
+h1, h2, p, ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 span {
   font-size: calc(20px + 4vmax);
   font-family: 'Zhi Mang Xing';
-  text-transform: capitalize;
 }
 
-button {
+.pick-spell {
   border-radius: 10%;
+}
+
+.before-click {
   background-image: url(wizard.svg);
-  height: 7vmin;
   width: 7vmin;
+  height: 7vmin;
+}
+
+.after-click {
+  background-image: url(refresh.svg);
+  height: 5vmin;
+  width: 5vmin;
+  background-size: cover;
 }
 
 .search {
@@ -30,9 +43,9 @@ input {
     background-color: white;
     border: black solid 2px;
     border-radius: 8%;
-    width: 50vh;
+    width: 30vh;
     height: calc(3vmin + 10px);
-    margin: 5px;
+    margin: 10px;
 }
 
 input:focus {
@@ -57,6 +70,11 @@ button:focus {
   font-size: calc(10px + 1vmin);
 }
 
+.card-heading {
+  text-align: center;
+  height: 12vh;
+}
+
 .card:hover {
   transition: ease-in;
   transform: scale(1.02, 1.02);
@@ -67,50 +85,48 @@ button:focus {
   display: none;
 }
 
-hr {
-  background: url(halloween.svg) no-repeat top center;
-  background-size: contain;
-  display: block;
-  height: 18px;
-  border: 0;
-  position: relative;
-}
-
-hr:before,
-hr:after {
-    content: '';
-    display: block;
-    position: absolute;
-    background: black;
-    height: 2px;
-    top: 8px;
-}
-
-hr:before {
-    left: 0;
-    right: 50%;
-    margin-right: 10px;
-}
-hr:after {
-    right: 0;
-    left: 50%;
-    margin-left: 10px;
-}
-
-img {
+h1 > img {
   height: calc(50px + 1vmin);
 }
 
-ul {
-  padding: 0 0 0 20px;
-  margin-bottom: 0;
-  margin-top: 0;
+div > img {
+  height: calc(30px + 1vmin);
+  display: block;
+  margin: 0 auto;
 }
 
-div > h1 {
+ul {
+  padding: 10px 0 5px 0;
+  list-style-type: none;
+}
+
+.card-heading > h1 {
   font-size: calc(15px + 1vmin);
 }
 
-div > h2 {
+.card-heading > h2 {
   font-size: calc(10px + 1vmin);
+  padding-top: 10px;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.center {
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.cast-spell {
+  border-radius: 10%;
+  font-size: calc(10px + 1vmin);
+  padding: 10px;
+  margin: 1vmin;
 }
