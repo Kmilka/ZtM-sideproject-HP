@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
-import cat from './halloween-black-cat.svg';
-import spellPicture from './spell.svg';
-import skull from './skull.svg';
-import magic from './halloween.svg';
-import star from './star.svg';
-import student from './student.svg';
-import brain from './brain.svg';
+import cat from './icons/halloween-black-cat.svg';
+import spellPicture from './icons/spell.svg';
+import skull from './icons/skull.svg';
+import magic from './icons/halloween.svg';
+import star from './icons/star.svg';
+import student from './icons/student.svg';
+import brain from './icons/brain.svg';
 
 
 class App extends Component {

@@ -1,3 +1,7 @@
+body {
+  background-color: blueviolet;
+}
+
 header {
   color: black;
   font-size: calc(10px + 1vmin);
@@ -19,13 +23,13 @@ span {
 }
 
 .before-click {
-  background-image: url(wizard.svg);
+  background-image: url(icons/wizard.svg);
   width: 7vmin;
   height: 7vmin;
 }
 
 .after-click {
-  background-image: url(refresh.svg);
+  background-image: url(icons/refresh.svg);
   height: 5vmin;
   width: 5vmin;
   background-size: cover;
