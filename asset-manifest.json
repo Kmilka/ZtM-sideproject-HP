@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/ZtM-sideproject-HP/static/css/main.0853415f.chunk.css",
+    "main.js": "/ZtM-sideproject-HP/static/js/main.5ca5e844.chunk.js",
+    "main.js.map": "/ZtM-sideproject-HP/static/js/main.5ca5e844.chunk.js.map",
+    "runtime-main.js": "/ZtM-sideproject-HP/static/js/runtime-main.6f45a5c4.js",
+    "runtime-main.js.map": "/ZtM-sideproject-HP/static/js/runtime-main.6f45a5c4.js.map",
+    "static/js/2.5f3a5b87.chunk.js": "/ZtM-sideproject-HP/static/js/2.5f3a5b87.chunk.js",
+    "static/js/2.5f3a5b87.chunk.js.map": "/ZtM-sideproject-HP/static/js/2.5f3a5b87.chunk.js.map",
+    "index.html": "/ZtM-sideproject-HP/index.html",
+    "precache-manifest.ca44dd4b7cc238b96249df4f6b782672.js": "/ZtM-sideproject-HP/precache-manifest.ca44dd4b7cc238b96249df4f6b782672.js",
+    "service-worker.js": "/ZtM-sideproject-HP/service-worker.js",
+    "static/css/main.0853415f.chunk.css.map": "/ZtM-sideproject-HP/static/css/main.0853415f.chunk.css.map",
+    "static/js/2.5f3a5b87.chunk.js.LICENSE": "/ZtM-sideproject-HP/static/js/2.5f3a5b87.chunk.js.LICENSE",
+    "static/media/brain.svg": "/ZtM-sideproject-HP/static/media/brain.014560c0.svg",
+    "static/media/halloween-black-cat.svg": "/ZtM-sideproject-HP/static/media/halloween-black-cat.b9454041.svg",
+    "static/media/halloween.svg": "/ZtM-sideproject-HP/static/media/halloween.a08c5f5a.svg",
+    "static/media/App.css": "/ZtM-sideproject-HP/static/media/wizard.a35beab3.svg",
+    "static/media/skull.svg": "/ZtM-sideproject-HP/static/media/skull.343185ea.svg",
+    "static/media/spell.svg": "/ZtM-sideproject-HP/static/media/spell.12d79651.svg",
+    "static/media/star.svg": "/ZtM-sideproject-HP/static/media/star.dfe50558.svg",
+    "static/media/student.svg": "/ZtM-sideproject-HP/static/media/student.a1ff269b.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6f45a5c4.js",
+    "static/js/2.5f3a5b87.chunk.js",
+    "static/css/main.0853415f.chunk.css",
+    "static/js/main.5ca5e844.chunk.js"
+  ]
+}
