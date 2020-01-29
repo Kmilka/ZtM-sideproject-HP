@@ -1,5 +1,5 @@
 body {
-  background-color: darkred;
+  background-color: blueviolet;
 }
 
 header {
@@ -68,7 +68,7 @@ button:focus {
 .card {
   border: solid 2px black;
   border-radius: 5%;
-  background-color: wheat;
+  background-color: cadetblue;
   margin: 7px;
   padding: 5px;
   font-size: calc(10px + 1vmin);
@@ -82,7 +82,7 @@ button:focus {
 .card:hover {
   transition: ease-in;
   transform: scale(1.02, 1.02);
-  background-color: red;
+  background-color: greenyellow;
 }
 
 .invisible {
