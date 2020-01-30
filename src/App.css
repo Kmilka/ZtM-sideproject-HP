@@ -45,7 +45,6 @@ input {
     font-family: 'Roboto', sans-serif;
     font-size: 2vmin;
     background-color: white;
-    border: black solid 2px;
     border-radius: 8%;
     width: 30vh;
     height: calc(3vmin + 10px);
@@ -54,6 +53,11 @@ input {
 
 input:focus {
   outline: none;
+  caret-color: black;
+}
+
+input:active {
+  caret-color: black;
 }
 
 button:focus {
@@ -133,4 +137,22 @@ ul {
   font-size: calc(10px + 1vmin);
   padding: 10px;
   margin: 1vmin;
+}
+
+.magic {
+  animation: magic-happens 2s ease-in;
+  position: absolute;
+  top: 50vh;
+  height: 10vh;
+  motion-path: path(circle);
+  motion-rotation: auto;
+}
+
+@keyframes magic-happens {
+from {
+  motion-path: 0;
+}
+to {
+  motion-offset: 100%;
+}
 }

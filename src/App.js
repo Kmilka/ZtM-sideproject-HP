@@ -7,12 +7,14 @@ import magic from './icons/halloween.svg';
 import star from './icons/star.svg';
 import student from './icons/student.svg';
 import brain from './icons/brain.svg';
+import magicwand from './icons/magic-wand.svg';
 
 
 class App extends Component {
   
   constructor() {
     super();
+    this.input = React.createRef();
     this.state = {
       characters: [],
       searchField: "",
@@ -24,10 +26,15 @@ class App extends Component {
 
   }
 
+  focusInput() {
+    this.input.current.focus();
+  }
+
   handleChange(event) {
     this.setState({
       searchField: event.target.value,
       })
+    this.focusInput();
   }
 
   handleClick() {
@@ -72,7 +79,7 @@ class App extends Component {
     return (
       (!characters.length || !spells.length)?
       <h1>Loading</h1> :
-      <div>
+      <div onLoad={() => this.focusInput()}>
         <header>
           <h1>
             Search for a certain person from <span>Harry Potter</span>
@@ -83,15 +90,18 @@ class App extends Component {
           </h1>
         </header>
         <div className="flex-column center">
-          <input type="text" placeholder="  Type name" onChange={(event) => this.handleChange(event)}></input>
+          <input type="text" placeholder="  Type name" ref={this.input}
+            onChange={(event) => this.handleChange(event)}
+            onClick={() => this.focusInput()}></input>
             <div className="flex-column center">
               <span className={animateSpell}>{flagCastASpell ? spell.spell : ""}</span>
               <p>{flagCastASpell ? spell.effect : ""}</p>
             <div className="flex-row center">
-              <button className={spellBtnImg.join(" ")} onClick={() => this.handleClick()}></button>             
-              <button className={CastASpellClass} onClick={() => this.castSpell()}>Cast this spell</button>
+              <button className={spellBtnImg.join(" ")} disabled={this.state.flagSpellInAction ? true : false} onClick={() => this.handleClick()}></button>             
+              <button className={CastASpellClass} disabled={this.state.flagSpellInAction ? true : false} onClick={() => this.castSpell()}>Cast this spell</button>
             </div>
         </div>
+        <img src={magicwand} alt="magic happens" className={this.state.flagSpellInAction ? "magic" : "invisible"} />
       </div>
 
         <CardList props= {filteredCharacters} />
